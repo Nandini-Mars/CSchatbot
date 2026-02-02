@@ -7,10 +7,6 @@ export default function Sidebar() {
         <span>New Query?</span>
         <Link to="/">+</Link>
       </div>
-
-      <Link to="/history">
-        <button>Past Conversations</button>
-      </Link>
     </aside>
   );
 }

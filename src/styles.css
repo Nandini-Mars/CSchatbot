@@ -1,0 +1,191 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f6f4fb;
+}
+
+/* APP LAYOUT */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #ede6ff;
+  padding: 20px;
+}
+
+.sidebar .new-chat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #d8cfff;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebar button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #d8cfff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #7a63d1;
+  font-size: 24px;
+}
+
+/* GREETING */
+.greeting {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.greeting h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ddd;
+  margin: auto;
+}
+
+/* SUGGESTION CARDS */
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.card p {
+  color: #777;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* INPUT AREA */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.chat-input button {
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #d8cfff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CHAT MESSAGES */
+.message {
+  max-width: 70%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+  position: relative;
+}
+
+.message.user {
+  background: #d8cfff;
+  align-self: flex-end;
+}
+
+.message.ai {
+  background: #fff;
+}
+
+/* THUMBS FEEDBACK */
+.message.ai .feedback {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.message.ai:hover .feedback {
+  display: block;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .suggestions {
+    grid-template-columns: 1fr;
+  }
+}
